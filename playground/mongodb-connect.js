@@ -1,5 +1,5 @@
 //const MongoClient = require('mongodb').MongoClient;
-const {MongoClient} = require('mongodb');
+const {MongoClient, ObjectID} = require('mongodb');
 
 
 MongoClient.connect('mongodb://localhost:27017/TodoApp',{ useNewUrlParser: true }, (err, client) =>{
@@ -12,16 +12,16 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp',{ useNewUrlParser: true 
 
 
 
-  db.collection('Todos').insertOne({
-    text: 'something to do it differently',
-    completed: false
-  }, (err, result) => {
-    if (err) {
-      console('Unable to Insert data', err);
-    } else {
-      console.log(JSON.stringify(result.ops, undefined, 2));
-    }
-  });
+  // db.collection('Todos').insertOne({
+  //   text: 'something to do it differently',
+  //   completed: false
+  // }, (err, result) => {
+  //   if (err) {
+  //     console('Unable to Insert data', err);
+  //   } else {
+  //     console.log(JSON.stringify(result.ops, undefined, 2));
+  //   }
+  // });
   // db.collection('Users').insertOne({
   //   name: 'Shahbaz',
   //   age: 30,
